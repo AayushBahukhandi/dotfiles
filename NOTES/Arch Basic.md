@@ -1,0 +1,9 @@
+- sudo pacman -S for installing packages
+- sudo pacman -Sy to update the latest package 
+- sudo pacman -Syu synchronize and update the packages
+- sudo pacman -Qs to list the packages
+- sudo pacman -Qm to list aur packages
+- paru -Syu to update all packages along with aur installed one
+- sudo pacman -r to remove the particular package
+- to install packages (use git clone the aur repo then cd into it)
+- makepkg -si this will build the package

@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "Cheerio.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,6 +56,42 @@
             }
           },
           {
+            "id": "a292b3d468366f56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rough Notes/Setup.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2575cbb8cbf8abe6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rough Notes/Setup.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5cc05dbeded75910",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rough Notes/Learning Resources Channel.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "89bac44f05cf65c2",
             "type": "leaf",
             "state": {
@@ -68,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -134,7 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rough Notes/Setup.md",
+                "file": "Rough Notes/Learning Resources Channel.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +187,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rough Notes/Setup.md",
+                "file": "Rough Notes/Learning Resources Channel.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +210,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rough Notes/Setup.md"
+                "file": "Rough Notes/Learning Resources Channel.md"
               }
             }
           }
@@ -196,13 +232,17 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d477ba1b4282497a",
+  "active": "05051f315d9a6a6a",
   "lastOpenFiles": [
-    "Pulumi.md",
-    "Untitled.md",
-    "Rough Notes/DOCKER.md",
     "Rough Notes/Setup.md",
+    "Rough Notes/Learning Resources Channel.md",
+    "Rough Notes/I3.md",
+    "Pulumi.md",
     "Rough Notes/Tmux.md",
+    "Rough Notes/DOCKER.md",
+    "Arch Basic.md",
+    "Arch Basic-.md",
+    "Cheerio.md",
     "Permanent Notes/Devops/Docker",
     "Permanent Notes/Devops",
     "Permanent Notes",

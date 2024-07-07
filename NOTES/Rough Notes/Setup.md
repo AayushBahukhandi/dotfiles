@@ -14,14 +14,20 @@ sudo apt install dconf-cli dconf-editor
 input-resources folder custom value ['caps:swapescape']
 sudo update-alternatives --config x-terminal-emulator (to change default terminal)
 tmux install
+tmux navigator install 
+nvim lazygit
+rofi
 snap install obsidian
 snap install spotify
 docker install
 `.zshrc`
 `config/kitty
 `config/nvim`
-`tmux config`
+`config/rofi`
+`config/lazygit`
+`tmux.conf`
 `config/starship.tml`
+`sudo apt-get install python3-bs4`(in order to run anime-colorscript)
 keyboard keybindings- 
  win +t =terminal
  win +f =browser
@@ -35,3 +41,7 @@ su root or sudo -i
 sudo sync; echo 1 > /proc/sys/vm/drop_caches
 sudo sync; echo 2 > /proc/sys/vm/drop_caches
 sudo sync; echo 3 > /proc/sys/vm/drop_caches
+ani-cli
+lobster
+webapi blocker extension to protect and see reverse engineering
+mangal
