@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE / editor
+.idea/
+*.swp
+*.swo
+*~
+
+# Nvim
+nvim/.config/nvim/lazy-lock.json
+nvim/.config/nvim/.git/
+
+# Per-machine files (kept local, never committed)
+*.local
+.env
+.env.local
+.env.*.local
+
+# Build / cache
+*.log
+.cache/
+
+# Backup artifacts
+*.bak
+*.orig
+*.rej
