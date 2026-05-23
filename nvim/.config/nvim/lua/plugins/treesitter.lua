@@ -24,6 +24,14 @@ return {
 				"svelte",
 			},
 
+			highlight = {
+				-- Disable TS highlight for markdown/mdx — Neovim 0.12.x has a
+				-- regression in injected-language predicates that crashes on
+				-- markdown fenced code blocks. Falls back to vim regex syntax.
+				-- See: https://github.com/neovim/neovim/issues/39032
+				disable = { "markdown", "markdown_inline", "mdx" },
+			},
+
 			-- matchup = {
 			-- 	enable = true,
 			-- },

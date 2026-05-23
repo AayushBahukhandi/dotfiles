@@ -64,6 +64,13 @@ return {
 		"snacks.nvim",
 		opts = {
 			scroll = { enabled = false },
+			-- Neovim 0.12.x treesitter regression: node:range() on nil from
+			-- inside language-injection predicates (markdown fenced blocks).
+			-- Disable snacks features that trigger early TS parsing on BufReadPost.
+			-- See: https://github.com/neovim/neovim/issues/39032
+			scope = { enabled = false },
+			indent = { enabled = false },
+			quickfile = { enabled = false },
 		},
 		keys = {},
 	},
