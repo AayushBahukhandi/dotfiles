@@ -17,4 +17,14 @@ if [ "$SENDER" = "volume_change" ]; then
   esac
 
   sketchybar --set "$NAME" icon="$ICON" label="$VOLUME%"
+elif [ "$SENDER" = "mouse.clicked" ]; then
+  case "$BUTTON" in
+    right)
+      open "x-apple.systempreferences:com.apple.Sound-Settings.extension" \
+        || open /System/Library/PreferencePanes/Sound.prefPane
+      ;;
+    *)
+      osascript -e 'set volume output muted not (output muted of (get volume settings))'
+      ;;
+  esac
 fi

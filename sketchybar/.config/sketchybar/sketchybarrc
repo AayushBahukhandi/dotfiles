@@ -113,7 +113,7 @@ sketchybar --add item clock right \
   --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
   --add item volume right \
   --set volume script="$PLUGIN_DIR/volume.sh" \
-  --subscribe volume volume_change \
+  --subscribe volume volume_change mouse.clicked \
   --add item annotate_highlighter right \
   --set annotate_highlighter update_freq=2 script="$PLUGIN_DIR/annotate_highlighter.sh" \
   --add item battery right \

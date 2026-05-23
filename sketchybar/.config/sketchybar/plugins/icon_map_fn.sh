@@ -241,6 +241,9 @@ function icon_map() {
   "GoLand")
     icon_result=":goland:"
     ;;
+  "Ghostty" | "ghostty")
+    icon_result=":ghostty:"
+    ;;
   "Chromium" | "Google Chrome" | "Google Chrome Canary")
     icon_result=":google_chrome:"
     ;;

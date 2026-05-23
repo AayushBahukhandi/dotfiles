@@ -9,7 +9,7 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = ['exec-and-forget /opt/homebrew/bin/sketchybar --reload']
 
 # Start AeroSpace at login
 start-at-login = true
@@ -189,6 +189,10 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # Default space
 [[on-window-detected]]
+if.app-id ='company.thebrowser.Browser'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
 if.app-id ='com.brave.Browser'
 run = ['move-node-to-workspace 1']
 
@@ -214,7 +218,7 @@ run = ['move-node-to-workspace 5']
 
 [[on-window-detected]]
 if.app-id ='com.hnc.Discord'
-run = ['move-node-to-workspace 5']
+run = ['move-node-to-workspace 6']
 
 [[on-window-detected]]
 if.app-id ='com.adobe.PremierePro.26'
