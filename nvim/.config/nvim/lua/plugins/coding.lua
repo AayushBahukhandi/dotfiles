@@ -1,4 +1,29 @@
 return {
+  -- Yank ring: after `p`, <C-n>/<C-p> cycle through recent yanks.
+  -- `<leader>p` opens a Telescope picker of paste history.
+  {
+    "gbprod/yanky.nvim",
+    event = { "TextYankPost", "VeryLazy" },
+    dependencies = { "kkharji/sqlite.lua" },
+    opts = {
+      ring = { storage = "sqlite", history_length = 100 },
+      highlight = { timer = 150 },
+    },
+    keys = {
+      { "<leader>p", function() require("telescope").extensions.yank_history.yank_history() end, desc = "Yank History" },
+      { "p", "<Plug>(YankyPutAfter)", mode = { "n", "x" } },
+      { "P", "<Plug>(YankyPutBefore)", mode = { "n", "x" } },
+      { "<C-n>", "<Plug>(YankyCycleForward)" },
+      { "<C-p>", "<Plug>(YankyCycleBackward)" },
+    },
+    config = function(_, opts)
+      require("yanky").setup(opts)
+      pcall(function()
+        require("telescope").load_extension("yank_history")
+      end)
+    end,
+  },
+
   -- todo-comments is included with LazyVim by default; this spec only tweaks
   -- the icon-prefix style (no behavior change to keymaps).
   {

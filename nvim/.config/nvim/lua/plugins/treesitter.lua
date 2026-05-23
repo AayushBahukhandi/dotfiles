@@ -1,4 +1,16 @@
 return {
+  -- Sticky function/class header at the top of the buffer when scrolling
+  -- through long files. Zero new keymaps; <leader>ut toggles via LazyVim.
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "BufReadPre",
+    opts = {
+      max_lines = 3,
+      multiline_threshold = 1,
+      trim_scope = "outer",
+    },
+  },
+
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
