@@ -1,69 +1,41 @@
 return {
-	-- Incremental rename
-	{
-		"smjonas/inc-rename.nvim",
-		cmd = "IncRename",
-		config = true,
-	},
-
-	-- Go forward/backward with square brackets
-	{
-		"nvim-mini/mini.bracketed",
-		event = "BufReadPost",
-		config = function()
-			local bracketed = require("mini.bracketed")
-			bracketed.setup({
-				file = { suffix = "" },
-				window = { suffix = "" },
-				quickfix = { suffix = "" },
-				yank = { suffix = "" },
-				treesitter = { suffix = "n" },
-			})
-		end,
-	},
-
-	-- Better increase/descrease
-	{
-		"monaqa/dial.nvim",
-    -- stylua: ignore
-    keys = {
-      { "<C-a>", function() return require("dial.map").inc_normal() end, expr = true, desc = "Increment" },
-      { "<C-x>", function() return require("dial.map").dec_normal() end, expr = true, desc = "Decrement" },
+  -- todo-comments is included with LazyVim by default; this spec only tweaks
+  -- the icon-prefix style (no behavior change to keymaps).
+  {
+    "folke/todo-comments.nvim",
+    opts = {
+      keywords = {
+        FIX = { icon = " ", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
+        TODO = { icon = " ", color = "info" },
+        HACK = { icon = " ", color = "warning" },
+        WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+        NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+        TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+      },
     },
-		config = function()
-			local augend = require("dial.augend")
-			require("dial.config").augends:register_group({
-				default = {
-					augend.integer.alias.decimal,
-					augend.integer.alias.hex,
-					augend.date.alias["%Y/%m/%d"],
-					augend.constant.alias.bool,
-					augend.semver.alias.semver,
-					augend.constant.new({ elements = { "let", "const" } }),
-				},
-			})
-		end,
-	},
+  },
 
-	-- copilot
-	{
-		"zbirenbaum/copilot.lua",
-		opts = {
-			suggestion = {
-				auto_trigger = true,
-				keymap = {
-					accept = "<C-l>",
-					accept_word = "<M-l>",
-					accept_line = "<M-S-l>",
-					next = "<M-]>",
-					prev = "<M-[>",
-					dismiss = "<C-]>",
-				},
-			},
-			filetypes = {
-				markdown = true,
-				help = true,
-			},
-		},
-	},
+  -- Pretty markdown rendering inside the buffer (replaces what we lose by
+  -- having to disable treesitter highlight on markdown for the nvim 0.12 bug).
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    ft = { "markdown" },
+    opts = {
+      heading = {
+        sign = false,
+        icons = { "󰉫 ", "󰉬 ", "󰉭 ", "󰉮 ", "󰉯 ", "󰉰 " },
+      },
+      code = {
+        sign = false,
+        width = "block",
+        right_pad = 1,
+      },
+      checkbox = {
+        unchecked = { icon = "󰄱 " },
+        checked = { icon = "󰱒 " },
+      },
+    },
+  },
 }

@@ -1,10 +1,11 @@
--- LazyVim defaults handle the keymap surface. Custom helpers are exposed as
--- ex-commands (no keybindings) so they stay available without overriding
--- LazyVim's bindings.
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
 
+-- Custom helpers — exposed as :commands so they don't override LazyVim defaults.
 vim.api.nvim_create_user_command("ReplaceHexWithHSL", function()
   require("aayush.hsl").replaceHexWithHSL()
-end, { desc = "Replace hex colors on the current line with HSL" })
+end, { desc = "Replace hex colors on current line with HSL" })
 
 vim.api.nvim_create_user_command("ToggleInlayHints", function()
   require("aayush.lsp").toggleInlayHints()
