@@ -1,4 +1,7 @@
 # ~/.zshenv — sourced for every zsh (including scripts)
 # Keep this minimal — heavy stuff goes in .zshrc / .zprofile
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"

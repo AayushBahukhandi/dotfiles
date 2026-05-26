@@ -38,32 +38,20 @@ eval "$(atuin init zsh)"
 # --- zoxide (smart cd: z, zi) ---
 eval "$(zoxide init zsh)"
 
+# --- mise (polyglot runtime manager) ---
+eval "$(mise activate zsh)"
+
 # --- PATH ---
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="/Applications/Cursor.app/Contents/Resources/app/bin:$PATH"
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
-# --- bun ---
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
 # --- opencode ---
 export PATH="$HOME/.opencode/bin:$PATH"
 alias oc='opencode'
 alias oc-sonnet='opencode --model openrouter/anthropic/claude-sonnet-4.6'
 alias oc-gpt5='opencode --model openrouter/openai/gpt-5-nano'
-
-# --- nvm (lazy-load for faster startup) ---
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# --- pyenv ---
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-command -v pyenv >/dev/null && eval "$(pyenv init --path)" && eval "$(pyenv init -)"
 
 # --- pnpm ---
 export PNPM_HOME="$HOME/Library/pnpm"
@@ -88,7 +76,7 @@ command -v duckman >/dev/null && eval "$(duckman completion zsh)"
 alias vi="nvim"
 alias v="nvim"
 alias c="cursor"
-alias z="zed"
+alias zd="zed"
 alias cc="claude"
 alias g="git"
 alias gs="git status"
